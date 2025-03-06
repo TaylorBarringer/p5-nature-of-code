@@ -1,0 +1,23 @@
+/* Basic reset to remove margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensuring the body takes the full height of the viewport */
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+}
+
+/* The main element takes up the whole screen */
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

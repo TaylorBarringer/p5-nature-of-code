@@ -1,0 +1,50 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full height and width for the body */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+}
+
+/* Header container - flex layout to align titles */
+header {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: baseline; /* Align titles on the same baseline */
+    width: 100%;
+    padding: 10px 20px; /* Add some padding */
+    position: relative; /* Keep this container relative for positioning */
+}
+
+/* Title for the blog (left-aligned) */
+#blog-title {
+    position: absolute; /* Fix it to the left side */
+    left: 20px;
+    font-weight: bold;
+}
+
+/* Title for the project sketch, centered in the header */
+#sketch-title {
+    text-align: center;
+    font-weight: normal;
+    margin: 0 auto; /* Center the project title */
+    margin-top: 13px;
+}
+
+/* Main container for the p5.js sketch */
+main {
+    flex-grow: 1; /* Make it take up the remaining space */
+    display: flex;
+    justify-content: center; /* Horizontally center the sketch */
+    align-items: center;     /* Vertically center the sketch */
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
