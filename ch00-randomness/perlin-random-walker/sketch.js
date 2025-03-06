@@ -1,6 +1,6 @@
-// Gaussian Random Walker
-//    Gaussian random walk is defined as one in which the step
-//    size is generated with a normal distribution.
+// Perlin Random Walker
+//    Using Perlin noise to generate smooth random values
+//    and applying a repelling force when close to the edge.
 // The Nature of Code by Daniel Shiffman, Ch. 0 Randomness
 //
 // Author: Taylor Barringer

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "gaussian-random-walker"
+		},
+		{
+			"path": "perlin-random-walker"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "perlin-random-walker"
+	}
+}
