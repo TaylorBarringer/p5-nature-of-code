@@ -12,35 +12,39 @@ html, body {
     margin: 0;
 }
 
+/* Body setup */
 body {
     display: flex;
     flex-direction: column; /* Stack the elements vertically */
 }
 
-/* Header container - flex layout to align titles */
+/* Header container - flex layout to align titles horizontally */
 header {
     display: flex;
-    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space items out */
+    align-items: center; /* Align vertically */
     width: 100%;
     padding: 10px 20px; /* Add some padding */
-    position: relative;
 }
 
 /* Title for the blog (left-aligned) */
 #blog-title {
     font-weight: bold;
+    font-size: 1.2em;
 }
 
 /* Title for the project sketch, centered in the header */
 #sketch-title {
-    position: absolute; /* Absolutely position it */
-    left: 50%;           /* Center horizontally */
-    transform: translateX(-50%); /* Correct for element width */
-    text-align: center;
     font-weight: normal;
-    top: 50%; /*  Vertically center the title */
-    transform: translate(-50%, -50%);
-    padding-top: 9px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Author title (right-aligned) */
+#author {
+    font-weight: normal;
+    font-size: .90em;
+    text-align: right;
 }
 
 /* Main container for the p5.js sketch */
@@ -55,4 +59,12 @@ main {
     /* Optional:  If you want to constrain the sketch size */
     /* max-width: 80%; */
     /* max-height: 80%; */
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
 }

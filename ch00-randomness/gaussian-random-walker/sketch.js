@@ -33,30 +33,24 @@ class Walker {
   }
 
   step() {
-    let xstep = randomGaussian(0, 3);
-    let ystep = randomGaussian(0, 3);
-    this.x += xstep;
-    this.y += ystep;
+    let xStep = randomGaussian(0, 3);
+    let yStep = randomGaussian(0, 3);
+    this.x += xStep;
+    this.y += yStep;
 
     // If close to an edge, apply a repelling force
     let edgeThreshold = 120; // How close it gets before repelling
     let repelFactor = 0.03; // Strength of the repel force
 
-    if (this.x < edgeThreshold) xstep += (edgeThreshold - this.x) * repelFactor;
+    if (this.x < edgeThreshold) xStep += (edgeThreshold - this.x) * repelFactor;
     if (this.x > width - edgeThreshold)
-      xstep -= (this.x - (width - edgeThreshold)) * repelFactor;
-    if (this.y < edgeThreshold) ystep += (edgeThreshold - this.y) * repelFactor;
+      xStep -= (this.x - (width - edgeThreshold)) * repelFactor;
+    if (this.y < edgeThreshold) yStep += (edgeThreshold - this.y) * repelFactor;
     if (this.y > height - edgeThreshold)
-      ystep -= (this.y - (height - edgeThreshold)) * repelFactor;
+      yStep -= (this.y - (height - edgeThreshold)) * repelFactor;
 
-    let newX = this.x + xstep;
-    let newY = this.y + ystep;
-
-    // Constrain within bounds softly
-    newX = max(bounds, min(width - bounds, newX));
-    newY = max(bounds, min(height - bounds, newY));
-
-    this.x = newX;
-    this.y = newY;
+    // Constrain within bounds
+    this.x = max(50, min(width - 50, this.x + xStep));
+    this.y = max(50, min(height - 50, this.y + yStep));
   }
 }
