@@ -13,6 +13,7 @@ function setup() {
   createCanvas(600, 600);
   walker = new Walker();
   background(220);
+  print("Gaussian Random Walker");
 }
 
 function draw() {
