@@ -1,7 +1,7 @@
-// Gaussian Random Walker
-//    A simple random walker that uses a Gaussian distribution to determine the
-//    step size in the x and y directions. The walker starts in the center of the
-//    canvas and takes a step in a random direction each frame.
+// Rainbow Walker
+//    A walker that moves randomly, but repels from the edges of the canvas. The
+//    walker changes color based on its y position, creating a rainbow gradient. The
+//    walker is also constrained to stay within the bounds of the canvas.
 // The Nature of Code by Daniel Shiffman, Ch. 0 Randomness
 //
 // Author: Taylor Barringer
@@ -12,12 +12,16 @@ let bounds = 50;
 function setup() {
   createCanvas(600, 600);
   walker = new Walker();
+  walkerBlack = new Walker();
   background(220);
+  colorMode(HSL, 360, 100, 100); // Using HSL for smooth gradients
 }
 
 function draw() {
   walker.step();
+  walkerBlack.step();
   walker.show();
+  walkerBlack.showBlack();
 }
 
 class Walker {
@@ -27,14 +31,20 @@ class Walker {
   }
 
   show() {
+    let hueValue = map(sin(this.y * 0.02), -1, 1, 0, 360); // Smooth cycling
+    fill(hueValue, 100, 50);
+    noStroke();
+    square(this.x, this.y, 25);
+  }
+  showBlack() {
     fill(0, 0, 0);
     noStroke();
-    square(this.x, this.y, 15);
+    square(this.x, this.y, 25);
   }
 
   step() {
-    let xstep = randomGaussian(0, 3);
-    let ystep = randomGaussian(0, 3);
+    let xstep = randomGaussian(0, 2.1);
+    let ystep = randomGaussian(0, 2.2);
     this.x += xstep;
     this.y += ystep;
 

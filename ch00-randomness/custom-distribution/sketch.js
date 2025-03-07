@@ -5,7 +5,7 @@
 // The Nature of Code by Daniel Shiffman, Ch. 0 Randomness
 //
 // Author: Taylor Barringer
-// Date:   2025-03-04
+// Date:   2025-03-01
 
 let bounds = 50;
 
@@ -13,6 +13,7 @@ function setup() {
   createCanvas(600, 600);
   walker = new Walker();
   background(220);
+  print("Gaussian Random Walker");
 }
 
 function draw() {
@@ -27,14 +28,14 @@ class Walker {
   }
 
   show() {
-    fill(0, 0, 0);
     noStroke();
+    fill(0, 0, 0);
     square(this.x, this.y, 15);
   }
 
   step() {
-    let xstep = randomGaussian(0, 3);
-    let ystep = randomGaussian(0, 3);
+    let xstep = randomGaussian(0, 2.6);
+    let ystep = randomGaussian(0, 2.6);
     this.x += xstep;
     this.y += ystep;
 
