@@ -7,12 +7,11 @@ This snippet keeps a random walker within the canvas bounds by applying a repell
 - **`edgeThreshold`**: Determines how close the walker can get to the edge before it starts being repelled.
 - **`repelFactor`**: Controls the strength of the repelling force applied when the walker is near the edge.
 - **`bounds`**: Prevents the walker from crossing the defined canvas boundaries, keeping it within a safe range.
+- This example is from within a `Walker` class.
 
 ### Code Snippet:
 
 ```javascript
-let bounds = 50; // global variable for bounds
-
 // set() can go inside a Walker class
 step() {
   let xStep = randomGaussian(0, 3);
