@@ -1,15 +1,18 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "C:/Users/taylo/Sync/obsidian-vault/personal/nature-of-code"
-		}
-	],
-	"settings": {
-		"a-file-icon-vscode.folderColor": "#888477",
-		"a-file-icon-vscode.folderTheme": "specific",
-		"liveServer.settings.multiRootWorkspaceName": "p5-nature-of-code"
-	}
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "C:/Users/taylo/Sync/obsidian-vault/personal/nature-of-code"
+    },
+    {
+      "path": "../p5-perlin-noise"
+    }
+  ],
+  "settings": {
+    "a-file-icon-vscode.folderColor": "#888477",
+    "a-file-icon-vscode.folderTheme": "specific",
+    "liveServer.settings.multiRootWorkspaceName": "p5-perlin-noise"
+  }
 }
